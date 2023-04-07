@@ -86,36 +86,36 @@ public class Delivery {
         private String type;
         private Customer customer;
 
-        public Builder setId(int id) {
+        public Builder deliveryId(int id) {
             this.id = id;
             return this;
         }
-        public Builder setAddress(String address) {
+        public Builder deliveryAddress(String address) {
             this.address = address;
             return this;
         }
 
-        public Builder setDeliveryDate(Date deliveryDate) {
+        public Builder dateOfDelivery(Date deliveryDate) {
             this.deliveryDate = deliveryDate;
             return this;
         }
 
-        public Builder setDeliveredBy(String deliveredBy) {
+        public Builder deliveredBy(String deliveredBy) {
             this.deliveredBy = deliveredBy;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder typeOfDelivery(String type) {
             this.type = type;
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder descriptionOfDelivery(String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setCustomer(Customer customer) {
+        public Builder customer(Customer customer) {
             this.customer = customer;
             return this;
         }

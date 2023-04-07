@@ -64,26 +64,26 @@ public class Order {
 
         private Customer customer;
 
-        public Builder setId(int id) {
+        public Builder orderId(int id) {
             this.id = id;
             return this;
         }
-        public Builder setOrderNumber(String orderNumber) {
+        public Builder orderNumber(String orderNumber) {
             this.orderNumber = orderNumber;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder typeOfOrder(String type) {
             this.type = type;
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder descriptionOfOrder(String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setCustomer(Customer customer) {
+        public Builder customer(Customer customer) {
             this.customer = customer;
             return this;
         }
