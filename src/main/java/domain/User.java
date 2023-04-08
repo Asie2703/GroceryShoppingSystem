@@ -15,7 +15,7 @@ public class User {
     private String userEmail;
     private String userPhone;
 
-    private User() {
+    public User() {
 
     }
 

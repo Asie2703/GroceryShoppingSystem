@@ -1,3 +1,10 @@
+/**
+ * ProductFactoryTest.java
+ * This is a test class for product factory class
+ * @author Asive Sibeko 219475296
+ * 03 April 2023
+ */
+
 package factory;
 
 import domain.Product;

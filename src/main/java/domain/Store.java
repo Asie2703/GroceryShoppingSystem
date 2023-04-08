@@ -9,7 +9,7 @@ package domain;
 
 public class Store {
 
-    private int storeId;
+    private String storeId;
     private String storeName;
     private String storeAddress;
     private String storeDescription;
@@ -25,11 +25,11 @@ public class Store {
         this.storeDescription = builder.storeDescription;
     }
 
-    public int getStoreId() {
+    public String getStoreId() {
         return storeId;
     }
 
-    public void setStoreId(int storeId) {
+    public void setStoreId(String storeId) {
         this.storeId = storeId;
     }
 
@@ -68,12 +68,12 @@ public class Store {
     }
 
     public static class Builder{
-        private int storeId;
+        private String storeId;
         private String storeName;
         private String storeAddress;
         private String storeDescription;
 
-        public Builder setStoreId(int storeId) {
+        public Builder setStoreId(String storeId) {
             this.storeId = storeId;
             return this;
         }

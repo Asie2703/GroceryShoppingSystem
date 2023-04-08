@@ -1,3 +1,10 @@
+/**
+ * StoreFactory.java
+ * This is a factory class for store entity
+ * @author Asive Sibeko 219475296
+ * 03 April 2023
+ */
+
 package factory;
 
 import domain.Store;
@@ -11,7 +18,8 @@ public class StoreFactory {
             return null;
         ;
         String storeId = Helper.generateId();
-        Store store = new Store.Builder().setStoreName(storeName)
+        Store store = new Store.Builder().setStoreId(storeId)
+                .setStoreName(storeName)
                 .setStoreAddress(storeAddress)
                 .setStoreDescription(storeDescription)
                 .build();

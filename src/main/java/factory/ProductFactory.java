@@ -1,3 +1,10 @@
+/**
+ * ProductFactory.java
+ * This is a factory class for product entity
+ * @author Asive Sibeko 219475296
+ * 03 April 2023
+ */
+
 package factory;
 
 import domain.Product;
@@ -11,7 +18,8 @@ public class ProductFactory {
             return null;
         ;
         String productId = Helper.generateId();
-        Product product = new Product.Builder().setProductNum(productNum)
+        Product product = new Product.Builder().setProductId(productId)
+                .setProductNum(productNum)
                 .setProductType(productType)
                 .setProductItem(productItem)
                 .setProductDescription(productDescription)

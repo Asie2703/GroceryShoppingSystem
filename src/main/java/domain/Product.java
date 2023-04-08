@@ -9,7 +9,7 @@ package domain;
 
 public class Product {
 
-    private int productId;
+    private String productId;
     private int productNum;
     private String productType;
     private String productItem;
@@ -27,7 +27,7 @@ public class Product {
     }
 
 
-    public int getProductId() {
+    public String getProductId() {
         return productId;
     }
 
@@ -59,13 +59,13 @@ public class Product {
     }
 
     public static class Builder{
-        private int productId;
+        private String productId;
         private int productNum;
         private String productType;
         private String productItem;
         private String productDescription;
 
-        public Builder setProductId(int productId) {
+        public Builder setProductId(String productId) {
             this.productId = productId;
             return this;
         }

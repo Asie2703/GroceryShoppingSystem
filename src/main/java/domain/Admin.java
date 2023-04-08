@@ -15,7 +15,7 @@ public class Admin {
     private String adminEmail;
     private String adminPhone;
 
-    private Admin() {
+    public Admin() {
 
     }
 
