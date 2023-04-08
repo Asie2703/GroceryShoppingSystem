@@ -11,7 +11,7 @@ public class Category {
     private String categoryId;
     private String categoryName;
     private String categoryType;
-    private Category(){
+    public Category(){
 
     }
     private Category(Builder builder) {

@@ -1,7 +1,7 @@
 package util;
 
 import java.util.UUID;
-
+import org.apache.commons.validator.routines.EmailValidator;
 public class Helper {
     public static boolean isNullorEmpty(String s){
         return (s == null || s.equals("") || s.isEmpty() || s.equalsIgnoreCase("null"));
@@ -9,5 +9,11 @@ public class Helper {
 
     public static String generateId(){
         return UUID.randomUUID().toString();
+    }
+
+    public static boolean isValidEmail(String email){
+        EmailValidator ev= EmailValidator.getInstance();
+        return ev.isValid(email);
+
     }
 }
