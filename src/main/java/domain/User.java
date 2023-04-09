@@ -9,7 +9,7 @@
 package domain;
 
 public class User {
-    private int userId;
+    private String userId;
     private String userName;
     private String userAddress;
     private String userEmail;
@@ -27,11 +27,11 @@ public class User {
         this.userPhone = builder.userPhone;
     }
 
-    public int getUserId() {
+    public String getUserId() {
         return userId;
     }
 
-    public void setUserId(int userId) {
+    public void setUserId(String userId) {
         this.userId = userId;
     }
 
@@ -79,7 +79,7 @@ public class User {
     }
 
     public static class Builder {
-        private int userId;
+        private String userId;
         private String userName;
         private String userAddress;
         private String userEmail;

@@ -9,7 +9,7 @@
 package domain;
 
 public class Admin {
-    private int adminId;
+    private String adminId;
     private String adminName;
     private String adminPassword;
     private String adminEmail;
@@ -27,11 +27,11 @@ public class Admin {
         this.adminPhone = builder.adminPhone;
     }
 
-    public int getAdminId() {
+    public String getAdminId() {
         return adminId;
     }
 
-    public void setAdminId(int adminId) {
+    public void setAdminId(String adminId) {
         this.adminId = adminId;
     }
 
@@ -79,7 +79,7 @@ public class Admin {
     }
 
     public static class Builder {
-        private int adminId;
+        private String adminId;
         private String adminName;
         private String adminPassword;
         private String adminEmail;

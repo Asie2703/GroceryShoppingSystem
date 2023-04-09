@@ -9,7 +9,7 @@
 package domain;
 
 public class Customer {
-    private int customerId;
+    private String customerId;
     private String firstName;
     private String lastName;
     private String phone;
@@ -29,7 +29,7 @@ public class Customer {
         this.address = builder.address;
     }
 
-    public int getCustomerId() {
+    public String getCustomerId() {
         return customerId;
     }
 
@@ -53,7 +53,7 @@ public class Customer {
         return address;
     }
 
-    public void setCustomerId(int customerId) {
+    public void setCustomerId(String customerId) {
         this.customerId = customerId;
     }
 
@@ -89,7 +89,7 @@ public class Customer {
                 '}';
     }
     public static class Builder{
-        private int customerId;
+        private String customerId;
         private String firstName;
         private String lastName;
         private String phone;
@@ -97,7 +97,7 @@ public class Customer {
         private String address;
 
 
-        public Builder setCustomerId(int customerId) {
+        public Builder setCustomerId(String customerId) {
             this.customerId = customerId;
             return this;
         }

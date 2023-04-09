@@ -20,7 +20,7 @@ public class CustomerFactory {
             return null;
         }
 
-        return new Customer.Builder()
+        return new Customer.Builder().setCustomerId(customerId)
                 .setFirstName(firstName)
                 .setLastName(lastName)
                 .setPhone(phone)
