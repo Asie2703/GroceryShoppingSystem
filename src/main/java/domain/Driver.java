@@ -1,19 +1,17 @@
 package domain;
 
-import java.util.Date;
-
 /**
- * POJO Class Driver
- * Name: Gilberto Silva
- * Student: 218239300
+ * Driver.java
+ * @author: Gilberto Silva (218239300)
+ * Date: 07 April 2023
  */
 public class Driver {
-    private int driver_ID;
+    private String driver_ID;
     private String first_Name;
     private String last_Name;
     private int driver_License_Number;
     private String vehicle_Information;
-    private int phone_Number;
+    private long phone_Number;
     private String email;
 
     //-----------Constructors--------------
@@ -31,9 +29,9 @@ public class Driver {
     }
 
     //------------Getters--------------
-    public int getDriver_ID() {return driver_ID;}
+    public String getDriver_ID() {return driver_ID;}
 
-    public void setDriver_ID(int driver_ID) {this.driver_ID = driver_ID;}
+    public void setDriver_ID(String driver_ID) {this.driver_ID = driver_ID;}
 
     public String getFirst_Name() {return first_Name;}
 
@@ -41,7 +39,7 @@ public class Driver {
 
     public String getLast_Name() {return last_Name;}
 
-    //------------Setters--------------
+
     public void setLast_Name(String last_Name) {this.last_Name = last_Name;}
 
     public int getDriver_License_Number() {return driver_License_Number;}
@@ -52,9 +50,9 @@ public class Driver {
 
     public void setVehicle_Information(String vehicle_Information) {this.vehicle_Information = vehicle_Information;}
 
-    public int getPhone_Number() {return phone_Number;}
+    public long getPhone_Number() {return phone_Number;}
 
-    public void setPhone_Number(int phone_Number) {this.phone_Number = phone_Number;}
+    public void setPhone_Number(long phone_Number) {this.phone_Number = phone_Number;}
 
     public String getEmail() {return email;}
 
@@ -74,15 +72,15 @@ public class Driver {
     }
     //---------------Builder---------------------------
     public static class Builder{
-        private int driver_ID;
+        private String driver_ID;
         private String first_Name;
         private String last_Name;
         private int driver_License_Number;
         private String vehicle_Information;
-        private int phone_Number;
+        private long phone_Number;
         private String email;
 
-        public Builder setDriver_ID(int driver_ID){
+        public Builder setDriver_ID(String driver_ID){
             this.driver_ID = driver_ID;
             return this;
         }
@@ -107,7 +105,7 @@ public class Driver {
             return this;
         }
 
-        public Builder setPhone_Number(int phone_Number){
+        public Builder setPhone_Number(long phone_Number){
             this.phone_Number = phone_Number;
             return this;
         }
