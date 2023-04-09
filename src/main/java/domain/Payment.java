@@ -9,18 +9,22 @@ package domain;
 
 public class Payment {
     private String paymentId;
-    private int customerId;
     private String paymentMethod;
-    private double paymentAmount;
+    private double paymentAmount; //could be totalPrice from Cart.java
     private boolean paymentStatus;
 
-    private Payment(){
+    //foreign key
+    /*firstName - Customer.java
+    * lastName - Customer.java
+    * or customerId - Customer.java
+    * */
+
+    public Payment(){
         //
     }
 
     private Payment(Builder builder){
         this.paymentId = builder.paymentId;
-        this.customerId = builder.customerId;
         this.paymentMethod = builder.paymentMethod;
         this.paymentAmount = builder.paymentAmount;
         this.paymentStatus = builder.paymentStatus;
@@ -32,14 +36,6 @@ public class Payment {
 
     public void setPaymentId(String paymentId) {
         this.paymentId = paymentId;
-    }
-
-    public int getCustomerId() {
-        return customerId;
-    }
-
-    public void setCustomerId(int customerId) {
-        this.customerId = customerId;
     }
 
     public String getPaymentMethod() {
@@ -70,7 +66,6 @@ public class Payment {
     public String toString() {
         return "Payment{" +
                 "paymentId='" + paymentId + '\'' +
-                ", customerId=" + customerId +
                 ", paymentMethod='" + paymentMethod + '\'' +
                 ", paymentAmount=" + paymentAmount +
                 ", paymentStatus=" + paymentStatus +
@@ -78,7 +73,6 @@ public class Payment {
     }
     public static class Builder{
         private String paymentId;
-        private int customerId;
         private String paymentMethod;
         private double paymentAmount;
         private boolean paymentStatus;
@@ -88,19 +82,14 @@ public class Payment {
             return this;
         }
 
-        public Builder setCustomerId(int customerId) {
-            this.customerId = customerId;
-            return this;
-        }
-
         public Builder setPaymentMethod(String paymentMethod) {
             this.paymentMethod = paymentMethod;
-            return this;
+            return  this;
         }
 
         public Builder setPaymentAmount(double paymentAmount) {
             this.paymentAmount = paymentAmount;
-            return this;
+            return  this;
         }
 
         public Builder setPaymentStatus(boolean paymentStatus) {
@@ -110,7 +99,6 @@ public class Payment {
 
         public Builder copy(Payment payment){
             this.paymentId = payment.paymentId;
-            this.customerId = payment.customerId;
             this.paymentMethod = payment.paymentMethod;
             this.paymentAmount = payment.paymentAmount;
             this.paymentStatus = payment.paymentStatus;

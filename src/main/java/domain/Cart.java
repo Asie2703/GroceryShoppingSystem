@@ -7,68 +7,34 @@
 
 package domain;
 
-import java.awt.image.BufferedImage;
 public class Cart {
-    private int customerId;
-    private BufferedImage productImage;
-    private String productName;
-    private String productDescription;
-    private double productPrice;
+    private String cartId;
     private int productQuantity;
     private double totalPrice;
 
-    private Cart(){
+    //foreign keys
+    /*productName - Product.java
+    productImage - Product.java
+    productDescription - Product.java
+    productPrice - Product.java
+    */
+
+    public Cart(){
         //
     }
 
     private Cart(Builder builder){
-        this.customerId = builder.customerId;
-        this.productImage = builder.productImage;
-        this.productName = builder.productName;
-        this.productDescription = builder.productDescription;
-        this.productPrice = builder.productPrice;
+        this.cartId = String.valueOf(builder.cartId);
         this.productQuantity = builder.productQuantity;
         this.totalPrice = builder.totalPrice;
     }
 
-    public int getCustomerId() {
-        return customerId;
+    public String getCartId() {
+        return cartId;
     }
 
-    public void setCustomerId(int customerId) {
-        this.customerId = customerId;
-    }
-
-    public BufferedImage getProductImage() {
-        return productImage;
-    }
-
-    public void setProductImage(BufferedImage productImage) {
-        this.productImage = productImage;
-    }
-
-    public String getProductName() {
-        return productName;
-    }
-
-    public void setProductName(String productName) {
-        this.productName = productName;
-    }
-
-    public String getProductDescription() {
-        return productDescription;
-    }
-
-    public void setProductDescription(String productDescription) {
-        this.productDescription = productDescription;
-    }
-
-    public double getProductPrice() {
-        return productPrice;
-    }
-
-    public void setProductPrice(double productPrice) {
-        this.productPrice = productPrice;
+    public void setCartId(int cartId) {
+        this.cartId = String.valueOf(cartId);
     }
 
     public int getProductQuantity() {
@@ -90,47 +56,19 @@ public class Cart {
     @Override
     public String toString() {
         return "Cart{" +
-                "customerId=" + customerId +
-                ", productImage=" + productImage +
-                ", productName='" + productName + '\'' +
-                ", productDescription='" + productDescription + '\'' +
-                ", productPrice=" + productPrice +
+                "cartId=" + cartId +
                 ", productQuantity=" + productQuantity +
                 ", totalPrice=" + totalPrice +
                 '}';
     }
 
     public static class Builder{
-        private int customerId;
-        private BufferedImage productImage;
-        private String productName;
-        private String productDescription;
-        private double productPrice;
+        private String cartId;
         private int productQuantity;
         private double totalPrice;
 
-        public Builder setCustomerId(int customerId) {
-            this.customerId = customerId;
-            return this;
-        }
-
-        public Builder setProductImage(BufferedImage productImage) {
-            this.productImage = productImage;
-            return this;
-        }
-
-        public Builder setProductName(String productName) {
-            this.productName = productName;
-            return this;
-        }
-
-        public Builder setProductDescription(String productDescription) {
-            this.productDescription = productDescription;
-            return this;
-        }
-
-        public Builder setProductPrice(double productPrice) {
-            this.productPrice = productPrice;
+        public Builder setCartId(int cartId) {
+            this.cartId = String.valueOf(cartId);
             return this;
         }
 
@@ -145,11 +83,7 @@ public class Cart {
         }
 
         public Builder copy(Cart cart){
-            this.customerId = cart.customerId;
-            this.productImage = cart.productImage;
-            this.productName = cart.productName;
-            this.productDescription = cart.productDescription;
-            this.productPrice = cart.productPrice;
+            this.cartId = cart.cartId;
             this.productQuantity = cart.productQuantity;
             this.totalPrice = cart.totalPrice;
             return this;
