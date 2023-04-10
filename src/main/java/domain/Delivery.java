@@ -1,9 +1,16 @@
+/**
+ * Delivery.java
+ * This is a POJO class for delivery entity
+ * @author Nomta Mquqo 217296580
+ * 04 April 2023
+ */
+
 package domain;
 
 import java.util.Date;
 
 public class Delivery {
-    private int id;
+    private String id;
     private String address;
     private Date deliveryDate;
     private String deliveredBy;
@@ -21,11 +28,11 @@ public class Delivery {
         this.customer = builder.customer;
     }
 
-    public int getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(String id) {
         this.id = id;
     }
 
@@ -78,7 +85,7 @@ public class Delivery {
     }
 
     public static class Builder {
-        private int id;
+        private String id;
         private String address;
         private Date deliveryDate;
         private String deliveredBy;
@@ -86,7 +93,7 @@ public class Delivery {
         private String type;
         private Customer customer;
 
-        public Builder deliveryId(int id) {
+        public Builder deliveryId(String id) {
             this.id = id;
             return this;
         }
@@ -120,7 +127,7 @@ public class Delivery {
             return this;
         }
 
-        public Builder copy(int id, String address, Date deliveryDate, String deliveredBy, String description, String type, Customer customer) {
+        public Builder copy(String id, String address, Date deliveryDate, String deliveredBy, String description, String type, Customer customer) {
             this.id = id;
             this.address = address;
             this.deliveryDate = deliveryDate;
